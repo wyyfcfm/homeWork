@@ -1,0 +1,66 @@
+@import "reset.css";
+.transition(@property:all,@duration:1s,@timing-function:linear,@delay:0s){
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -ms-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}
+#header{
+  background:#22206a;
+  height: 89px;
+  overflow: hidden;
+  a{
+    display: block;
+    line-height: 89px;
+    margin-left: 12%;
+    float: left;
+    img{
+      vertical-align: middle;
+    }
+  }
+  .nav{
+    display: block;
+    color:#fff;
+    margin-left: 50%;
+    min-width: 500px;
+    height: 89px;
+    overflow: hidden;
+    li{
+      float: left;
+      line-height:89px;
+      width: 120px;
+      color:#ccc;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+      z-index: 10;
+      span{
+        display: block;
+        width: 5px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        top:0;
+        height:89px;
+        z-index: -10;
+        .transition(@duration:0.2s);
+      }
+      &:hover {
+        span {
+          width: 120px;
+          left: 0%;
+          background: rgba(255,255,255,0.1);
+        }
+      }
+
+
+
+
+    }
+
+    
+  }
+  
+}
