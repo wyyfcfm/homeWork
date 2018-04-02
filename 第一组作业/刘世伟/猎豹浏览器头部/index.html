@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+    <div></div>
+    <div class="logo">
+        <a href="#" class="">
+            <img src="img/logo.png" alt="">
+        </a>
+    </div>
+    <div class="menu">
+        <a href="#">首页<span></span></a>
+        <a href="#">下载<span></span></a>
+        <a href="#">论坛<span></span></a>
+        <a href="#">International<span></span></a>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var header = document.getElementById("header");
+    var ary = ["rgb(34, 32, 106)", "red"];
+
+    var curIndex =0;
+    function bgColor() {
+
+        if (curIndex == ary.length-1) {
+            curIndex = 0;
+        } else {
+            curIndex += 1;
+        }
+        header.style.background = ary[curIndex];
+    }
+
+    window.setInterval(bgColor, 2000);
+
+
+</script>

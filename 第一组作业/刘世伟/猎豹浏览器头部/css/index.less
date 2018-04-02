@@ -1,0 +1,65 @@
+@import "reset.min.css";
+.transition(@property:all,@duration:1s,@timing-function:linear,@delay:0s) {
+  -ms-transition: @arguments;
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}
+
+@bg-color: rgb(34, 32, 106);
+@bg-color1: red;
+.header{
+  width: 100%;
+  background: @bg-color;
+  height: 89px;
+  position: relative;
+  .logo{
+    width: 270px;
+    height: 51px;
+    position: absolute;
+    top: 19px;
+    left: 10%;
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .menu{
+    position: absolute;
+    right:15%;
+
+   a{
+     float: left;
+     width: auto;
+     height: 88px;
+     font-size: 18px;
+     line-height: 88px;
+     padding:  0 30px;
+     color: white;
+     position: relative;
+     z-index: 10;
+     span{
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 50%;
+       width: 1%;
+       margin: 0 auto;
+       height: 88px;
+       background: none;
+       z-index: -1;
+       .transition(@duration:0.08s)
+     }
+     &:hover{
+        span{
+          left: 0;
+          width: 100%;
+          background-color: rgba(204,204,204,0.3);
+        }
+     }
+   }
+
+  }
+}
